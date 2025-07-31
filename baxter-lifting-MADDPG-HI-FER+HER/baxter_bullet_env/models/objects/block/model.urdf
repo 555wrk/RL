@@ -1,0 +1,37 @@
+<robot name="block">
+  <link name="block">
+    <contact>
+      <friction_anchor/>
+      <lateral_friction value="1.0"/>
+      <rolling_friction value="0.0"/>
+      <contact_cfm value="0.0"/>
+      <contact_erp value="1.0"/>
+      <stiffness value="1000"/>
+      <damping value="50"/>
+    </contact>
+
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+       <mass value="0.05"/>
+       <inertia ixx="5.2e-4" ixy="0" ixz="0" iyy="5.2e-4" iyz="0" izz="5.2e-4"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0.0125 0.0125 0.0125"/>
+      <geometry>
+        <box size="0.025 0.025 0.025" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.5 .5 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0125 0.0125 0.0125"/>
+      <geometry>
+        <box size="0.025 0.025 0.025" />
+      </geometry>
+    </collision>
+  </link>
+</robot>
+
